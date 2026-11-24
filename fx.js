@@ -192,7 +192,7 @@
   }
   function fire(title, body, tag) {
     if (notifyState() !== 'granted') return;
-    var opts = { body: body, tag: tag, icon: 'icons/icon-192.png', badge: 'icons/icon-192.png' };
+    var opts = { body: body, tag: tag, icon: 'icon-192.png', badge: 'icon-192.png' };
     if (navigator.serviceWorker && navigator.serviceWorker.ready) {
       navigator.serviceWorker.ready.then(function (r) { r.showNotification(title, opts); })
         .catch(function () { try { new Notification(title, opts); } catch (e) {} });
